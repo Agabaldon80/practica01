@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Lora'; se le puede poner esto aquí si quiero que toda la pag  tenga la misma letra */
+}
+@font-face {
+    font-family: 'Lora';
+    src: url('../Fonts/Lora/static/Lora-Regular.ttf');
+}
+/* font-family: 'Lora'; */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Fonts/Roboto/Roboto-Regular.ttf');
+}
+/* font-family: 'Roboto'; */
+/* #8C3C21,#D6B187 (marron claro),#FCB622 (amarillo),#468361 (verdeClaro) ,#113D26 (verdeoscuro) */
+
+html {
+    font-size: 10px;
+    /* esto hace que un rem sea 10px */
+
+}
+.fondo-cuerpo {
+    background-color:#FCB622 ;
+}
+.fondo-principal {
+    background-color: #D6B187;
+}
+.fondo-footer{
+    background-color: #8C3C21;
+}
+
+// .nav-flex {
+//     background-color: beige;
+//     display: flex;
+//     justify-content: space-between;
+
+// }
+// .nav-flex a {
+//     text-transform: uppercase;
+//     font-size: 24px;
+//     color: #8C3C21;
+//     padding: 20px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 10px;
+// }
+// .nav-flex a img {
+//     width: 50px;
+//     height: 50px;
+//     object-fit: cover;
+//     border-radius: 100%;
+
+// }
+// .nav-flex ul li {
+//     /* display: inline; */
+//     padding: 20px;
+// }
+// .nav-flex ul {
+//     display: flex;
+//     justify-content: flex-end;
+//     list-style-type: none;
+//     /* text-align: center; */
+// }
+// .nav-flex ul li a {
+
+//     text-transform: uppercase;
+//     font-size: 24px;
+//     color: #8C3C21;
+// } 
+
+.titulo-pagina{
+    color: #113D26;
+    font-family: 'Lora';
+    text-align: center;
+}
+.cajas {
+    background-color: #D6B187;
+    /* height: 1200px; */
+    min-height: 100vh;
+    max-height: 100%;
+    padding: 20px 0;
+
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /*wrap con column tira el elemento hacia el costado en lugar de hacia abajo*/
+
+    /* flex-wrap: wrap; */
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    /*flex-direction + flex-wrap = flex-flow: row wrap; (direction+wrap)*/
+    flex-flow: row wrap;
+
+    /* Justify alinea en el eje x */
+    /* justify-content: center; */
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    /* justify-content: baseline; */
+    /* justify-content: stretch; */
+
+    /* align alinea en el eje y */
+    align-items: center;
+    
+    gap: 10px; /*espaciado interno*/
+
+}
+
+.caja {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 30%;
+    height: 600px; */
+    background-color: #468361;
+    color: #FCB622;
+    width: 30%;
+    gap: 10px;
+
+
+}
+.caja h2, .caja p{
+    padding: 10px;
+
+}
+
+.caja p{
+    font-size: 12px;
+
+}
+
+.caja img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.c2 {
+    background-color: #113D26;
+    /* height: 200px; */
+
+}
+
+.c3 {
+    background-color: aquamarine;
+    /* height: 200px; */
+
+}
+
+.c4 {
+    width: 90%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.caja-contenido {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    /* height: 100%; */
+    width: 40%;
+
+}
+.c4 img {
+    width: 50%;
+    align-self: center;
+    height: 100%;
+
+}
+
+.caja-contenido a {
+    text-decoration: none;
+    color: bisque;
+    padding: 10px;
+    border: solid 2px #eeee;
+    border-radius: 10%;
+    align-self: flex-end; /*se le puede dar propiedades flex a cualquier elemento cuyo padre es display flex*/
+    width: 150px;
+    text-align: center;
+}
+.footer {
+    background-color: #8C3C21;
+}

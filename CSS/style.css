@@ -1,0 +1,1107 @@
+@charset "UTF-8";
+.fondo-cuerpo {
+  background-color: #FCB622;
+}
+
+.fondo-principal {
+  background-color: #D6B187;
+}
+
+.fondo-footer {
+  background-color: #8C3C21;
+}
+
+.titulo-pagina {
+  color: #113D26;
+  font-family: "Lora";
+  text-align: center;
+}
+
+/* Flex */
+.hero {
+  background-color: #D6B187;
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-evenly;
+  align-items: center;
+  /* display: inline-block; */
+  width: 100%;
+  margin-top: 80px;
+}
+
+.hero img {
+  /* display: inline-block; */
+  width: 40%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 100%;
+  padding: 30px;
+  /* margin-top: 10px; */
+}
+
+.hero-content {
+  /* display: inline-block; */
+  width: 49%;
+  padding: 50px;
+  /* position: absolute; aplicando esto aquí se podría poner texto sobre la imágen */
+  /* bottom: 100px; */
+}
+
+/* boxmodel */
+.cards {
+  background-color: #468361;
+  padding: 15px 50px;
+  text-align: center;
+  /* position: absolute; */
+}
+
+.card-body {
+  display: inline-block;
+  width: 27%;
+  text-align: left;
+  border: #D6B187 solid 1px;
+  background-color: beige;
+  margin: 30px;
+  /* position: sticky; */
+  position: relative; /*se necesita ajuro esta en conjunto con el absolute de abajo .nuevo para que aparezcan los "ultima oportunidad*/
+  top: 10px;
+  left: 20px;
+  /* overflow: hidden; */
+}
+
+.card-body h2, .card-body p {
+  padding: 15px;
+}
+
+.card-body img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.nuevo {
+  background-color: #FCB622;
+  padding: 5px;
+  color: #468361;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: -15px;
+}
+
+.texto-parrafo01 {
+  color: #468361;
+  font-family: "Roboto";
+  background-color: #D6B187;
+  /* height: 200px;
+  width: 200px;
+  overflow:hidden; */
+  padding: 20px 40px; /* asi marca arriba y abajo 20 y derecha e izquierda 40*/
+  margin: 20px 40px;
+  border: solid 5px #468361;
+  border-radius: 5%;
+}
+
+.texto-parrafo02 {
+  color: #FCB622;
+  font-family: "Roboto";
+  background-color: #113D26;
+  padding: 30px 50px;
+  margin: 20px 40px;
+  border: solid 5px #D6B187;
+  border-radius: 5%;
+  text-align: justify;
+}
+
+.texto-parrafo03 {
+  color: #8C3C21;
+  font-family: "Roboto";
+  background-color: #468361;
+  padding: 40px 60px;
+  margin: 20px 40px;
+  border: solid 5px #8C3C21;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.foto-parrafo01 {
+  /* padding: 10px; */
+  width: 500px;
+  height: 300px;
+  /* overflow:hidden; */
+  margin: 20px;
+  border: solid 5px salmon;
+  border-radius: 30px;
+  /* height: 1800px;
+  width: 1800px; */
+}
+
+.foto-parrafo01 img {
+  width: 100%;
+  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  border-radius: 30px;
+  /* overflow:hidden; */
+}
+
+.wsp {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  object-fit: cover;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/*Flexbox*/
+/* grid */
+.grilla {
+  border: 3px solid red;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 15px;
+  padding: 15px;
+  grid-template-areas: "area1 area1 area2 area2" "area1 area1 area2 area2" "area3 area3 area4 area4" "area5 none area7 area8";
+}
+
+/* grid-template-columns: 300px 50%; */
+/* grid-template-columns: 300px 300px 300px; */
+/* grid-template-columns: 200px 200px 200px; no caben y se rompe */
+/* funcion repeat (cantidad cols, tamaño col */
+/* grid-template-columns: repeat(4, 300px); */
+/* grid-template-columns: repeat(4, 25%); */
+/* grid-template-columns: repeat(1, 300px);  */
+/*divide 1 fraccion en 4 columnas*/
+/* grid-template-columns: repeat(5, 1fr);  */
+/* divide 1 fraccion en 5 columnas */
+/* grid-template-columns: 1fr 2fr 3fr 1fr; */
+/* estos frames con width 100% rellenan el espacio */
+/* grid-template-rows: repeat(2, 200px) ; */
+/* grid-template-rows: auto; */
+/* con auto me queda del tamaño del texo */
+/* grid-template-rows: repeat(auto,1fr); */
+/* equivalente a justify-content es justify-items */
+/* justify-items: center; */
+/* justify-items: start;
+justify-items: end; */
+/* AREAS debo declarar tantas como columnas tenga en grid-template-columns */
+/* esto ultimo hace que la foto 1 quede en el centro */
+/* align-items: center;
+place-items: center;
+justify-items: center; */
+.grilla-hijo {
+  /* width: 300px; */
+  width: 100%;
+  height: 100%;
+  background-color: #113D26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid green;
+}
+
+.grilla-hijo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* display: flex;*/
+}
+
+.grilla-hijo a {
+  width: 100%;
+  height: 100%;
+  /* place-items: center;
+  justify-items: center; */
+}
+
+.grilla-hijo p {
+  color: #468361;
+  font-size: 30px;
+}
+
+.grilla-hijo-card {
+  padding: 20px 10px;
+  font-size: 30px;
+}
+
+.grilla-hijo-card p {
+  font-size: 20px;
+}
+
+.g1 {
+  grid-area: area1;
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+}
+
+.g1 img {
+  border-radius: 100%;
+}
+
+.g2 {
+  grid-area: area2;
+  /* display: flex; */
+}
+
+.g2 img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  /* display: flex;*/
+}
+
+.g3 {
+  grid-area: area3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.g3 img {
+  width: 100%;
+  height: 20% px;
+  object-fit: cover;
+}
+
+.g4 {
+  grid-area: area4;
+}
+
+.g4 img {
+  width: 100%;
+  height: 100% px;
+  object-fit: cover;
+}
+
+.g5 {
+  grid-area: area5;
+  /* width: 100%;
+  height: 90%; */
+}
+
+/* .g5 a {
+    place-items: center;
+    justify-items: center;
+} */
+.g6 {
+  grid-area: area6;
+}
+
+.g7 {
+  grid-area: area7;
+  width: 100%;
+  height: 90%;
+}
+
+.g8 {
+  grid-area: area8;
+}
+
+/* Mediaqueries, forma correcta de trabajar */
+@media only screen and (max-width: 1024px) {
+  .grilla {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "area7 area7 area3 area3" "area8 area8 area5 area5" "area4 area4 area1 area1" "area2 area2 area1 area1";
+    /* 'area1 area1 area2 area2'
+    'area1 area1 area2 area2'
+    'area3 area3 area4 area4'
+    'area5 none area7 area8' 
+    ; */
+  }
+}
+/* video 2h20 */
+/*Pseudoclases*/
+/*todos los elementos <a> que tengan atributo href definido y no hayan sido visitados*/
+/* a:link {
+    background-color: aquamarine;
+    color: darkblue;
+}
+a:visited {
+    background-color: cadetblue;
+    color: violet;
+} */
+/*Todos los elementos <a> cuando el mouse está sobre ellos*/
+/* a:hover {
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgb(10, 10, 60);
+    color: azure;
+} */
+/*todos los elementos <a> cuando haces clic sobre ellos*/
+/* a:active {
+    background-color: yellow;
+    color: black; */
+/* Ejemplos hover */
+/* .pseudo:hover {
+    background-color: coral;
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+}
+.pseudo:hover p {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+} */
+/* En este estilo de hover necesito que el cursor se pare sobre el parrafo, en el de arriba no */
+/* .pseudo p:hover{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+} */
+/* Para alternar los hijos */
+/* .pseudo:first-child, .pseudo:last-child {
+    background-color: #113D26;
+    color: aliceblue;
+} */
+/* este nth toma cada 3 hermanos */
+/* .pseudo:nth-child(3n){ */
+/* este nth toma los 3 primeros */
+/* .pseudo:nth-child(-n+3){ */
+/* .pseudo:nth-child(+n+4){ */
+/* esta me da los impares o pares */
+/* .pseudo:nth-child(odd){ */
+/* .pseudo:nth-child(even){ */
+/* .pseudo:nth-child(2n+1){ */
+/* .pseudo:nth-child(2n+2){ */
+/* .pseudo:nth-child(3n+2){ */
+/* background-color: #113D26; */
+/* color: aliceblue; */
+/* flex-direction: row-reverse; */
+/* } */
+.pseudos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* padding: 100px 0; */
+  /*100vh es el alto del navegador*/
+  min-height: 100vh;
+  max-height: 100%;
+  background-color: #FCB622;
+  gap: 20px;
+  padding: 30px;
+  margin-top: 70px;
+}
+
+.pseudo {
+  width: 90%;
+  height: 400px;
+  background-color: orangered;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(238, 238, 238, 0.9333333333);
+  font-size: 20px;
+  /* Aplicar una transición desde el elemento original  */
+  /* transition: 0.6s; */
+  transition: ease-in-out 0.4s;
+  overflow: hidden;
+  position: relative;
+}
+
+.pseudo img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  /* filter: grayscale(1); */
+  filter: blur(5px);
+  transition: ease-in-out 0.4s;
+}
+
+/* este lo saco porque estoy poniendo .pseudo:hover img */
+/* .pseudo img:hover {
+    filter: grayscale(0);
+} */
+.link {
+  height: 300px;
+}
+
+.random {
+  margin: 10px;
+  font-size: 30px;
+  padding: 30px;
+  color: black;
+  text-decoration: none;
+  background-color: #eebe57;
+  transition: 0.6s;
+  border: 2px solid transparent;
+}
+
+.random:hover {
+  color: antiquewhite;
+  transition: 0.6s;
+  border: 2px solid white;
+}
+
+.random:visited {
+  background-color: #ee5757;
+}
+
+.pseudo:hover img {
+  filter: blur(0px);
+  transition: ease-in-out 0.4s;
+  height: 600px;
+  /* si le cambio por ejemplo width 60% agranda la imagen, pero se puede romper el texto */
+  width: 40%;
+}
+
+.pseudo__contenedor {
+  padding: 50px;
+  width: 50%;
+}
+
+.pseudo__circle {
+  width: 100px;
+  height: 100px;
+  background-color: #D6B187;
+}
+
+.pseudo:hover {
+  background-color: #468361;
+  /* box-shadow: horizontal vertical blur spread radius color */
+  box-shadow: 5px 5px 15px 0px black;
+}
+
+.pseudo:hover .pseudo__circle {
+  background-color: #8C3C21;
+  border-radius: 100%;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  transition: ease-in-out 0.4s;
+}
+
+.pseudo:nth-child(even) {
+  background-color: #113D26;
+  color: aliceblue;
+  flex-direction: row-reverse;
+}
+
+.pseudo:nth-child(even):hover {
+  background-color: #126135;
+  box-shadow: 5px 5px 15px 0px black;
+}
+
+.card {
+  width: 70%;
+}
+
+/* bootstrap */
+.container-fluid img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.offcanvas-header img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.container {
+  background-color: #468361;
+  /* margin: 20px;
+  padding: 110px; */
+}
+
+.carousel-inner {
+  height: 400px;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../Fonts/Lora/static/Lora-Regular.ttf");
+}
+/* font-family: 'Lora'; */
+@font-face {
+  font-family: "Roboto";
+  src: url("../Fonts/Roboto/Roboto-Regular.ttf");
+}
+/* font-family: 'Roboto'; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Lora'; se le puede poner esto aquí si quiero que toda la pag  tenga la misma letra */
+}
+
+/* #8C3C21,#D6B187 (marron claro),#FCB622 (amarillo),#468361 (verdeClaro) ,#113D26 (verdeoscuro) */
+html {
+  font-size: 10px;
+  font-family: "Roboto";
+  /* esto hace que un rem sea 10px */
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.menu-navegador-box {
+  background-color: black;
+  padding: 20px 30px;
+  width: 100%;
+  text-align: right;
+  z-index: 1;
+  position: fixed; /* con estas dos lineas puedo poner menu fijo en top a que scrolee */
+  /* top: 0;  */
+}
+.menu-navegador-box ul {
+  display: inline;
+  list-style-type: none;
+  text-align: center;
+}
+.menu-navegador-box ul li {
+  display: inline;
+  padding: 20px;
+}
+.menu-navegador-box ul li a {
+  text-transform: capitalize;
+  font-size: 24px;
+  color: #f3541f;
+}
+
+/* navegador flex */
+.nav-flex {
+  background-color: rgb(239, 239, 73);
+  display: flex;
+  justify-content: space-between;
+}
+.nav-flex ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  /* text-align: center; */
+}
+.nav-flex ul li {
+  /* display: inline; */
+  padding: 20px;
+}
+.nav-flex ul li a {
+  text-transform: lowercase;
+  font-size: 32px;
+  color: #e24b19;
+}
+.nav-flex a {
+  font-size: 40px;
+  color: #8C3C21;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.nav-flex a img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.navbar {
+  background-color: #ee5757;
+  height: 70px;
+  background-image: url("../Images/estrellas02.jpg");
+  object-fit: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 50%;
+}
+
+.footer {
+  background-color: #8C3C21;
+}
+
+.footer a i {
+  font-size: 60px;
+  color: #ee5757;
+}
+
+.footer a i:hover {
+  color: aqua;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Lora'; se le puede poner esto aquí si quiero que toda la pag  tenga la misma letra */
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../Fonts/Lora/static/Lora-Regular.ttf");
+}
+/* font-family: 'Lora'; */
+@font-face {
+  font-family: "Roboto";
+  src: url("../Fonts/Roboto/Roboto-Regular.ttf");
+}
+/* font-family: 'Roboto'; */
+/* #8C3C21,#D6B187 (marron claro),#FCB622 (amarillo),#468361 (verdeClaro) ,#113D26 (verdeoscuro) */
+html {
+  font-size: 10px;
+  /* esto hace que un rem sea 10px */
+}
+
+.fondo-cuerpo {
+  background-color: #FCB622;
+}
+
+.fondo-principal {
+  background-color: #D6B187;
+}
+
+.fondo-footer {
+  background-color: #8C3C21;
+}
+
+.titulo-pagina {
+  color: #113D26;
+  font-family: "Lora";
+  text-align: center;
+}
+
+.cajas {
+  background-color: #D6B187;
+  /* height: 1200px; */
+  min-height: 100vh;
+  max-height: 100%;
+  padding: 20px 0;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /*wrap con column tira el elemento hacia el costado en lugar de hacia abajo*/
+  /* flex-wrap: wrap; */
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap-reverse; */
+  /*flex-direction + flex-wrap = flex-flow: row wrap; (direction+wrap)*/
+  flex-flow: row wrap;
+  /* Justify alinea en el eje x */
+  /* justify-content: center; */
+  /* justify-content: flex-end; */
+  /* justify-content: flex-start; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
+  /* justify-content: baseline; */
+  /* justify-content: stretch; */
+  /* align alinea en el eje y */
+  align-items: center;
+  gap: 10px; /*espaciado interno*/
+}
+
+.caja {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 30%;
+  height: 600px; */
+  background-color: #468361;
+  color: #FCB622;
+  width: 30%;
+  gap: 10px;
+}
+
+.caja h2, .caja p {
+  padding: 10px;
+}
+
+.caja p {
+  font-size: 12px;
+}
+
+.caja img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.c2 {
+  background-color: #113D26;
+  /* height: 200px; */
+}
+
+.c3 {
+  background-color: aquamarine;
+  /* height: 200px; */
+}
+
+.c4 {
+  width: 90%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.caja-contenido {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  /* height: 100%; */
+  width: 40%;
+}
+
+.c4 img {
+  width: 50%;
+  align-self: center;
+  height: 100%;
+}
+
+.caja-contenido a {
+  text-decoration: none;
+  color: bisque;
+  padding: 10px;
+  border: solid 2px rgba(238, 238, 238, 0.9333333333);
+  border-radius: 10%;
+  align-self: flex-end; /*se le puede dar propiedades flex a cualquier elemento cuyo padre es display flex*/
+  width: 150px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #8C3C21;
+}
+
+.contenedor {
+  background-color: blueviolet;
+  background-color: rgb(77, 60, 205);
+  padding: 50px;
+}
+.contenedor__hijo__parrafo {
+  color: rgb(222, 115, 115);
+}
+.contenedor__hijo {
+  padding: 10px;
+}
+.contenedor__hijo__parrafo {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 30px;
+}
+.contenedor__hijo__parrafo__span {
+  padding: 10px;
+  color: orange;
+}
+.contenedor .parrafo-minusculo {
+  padding: 30px 0;
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: rgba(238, 238, 238, 0.9333333333);
+}
+.contenedor .parrafo-minusculo-span {
+  color: yellowgreen;
+  transition: 0.5s;
+}
+.contenedor .parrafo-minusculo-span:hover {
+  color: #D6B187;
+}
+.contenedor .parrafo-minusculo .otra {
+  color: rgba(238, 238, 238, 0.9333333333);
+}
+.contenedor .parrafo-minusculo a {
+  color: aqua;
+}
+
+.bg {
+  height: 700px;
+  width: 100%;
+  background: url("https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.box {
+  display: none;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 60px;
+}
+
+h4 {
+  font-size: 80px;
+}
+
+h5 {
+  font-size: 100px;
+}
+
+h6 {
+  font-size: 120px;
+}
+
+.col-1 {
+  width: 10%;
+}
+
+.col-2 {
+  width: 20%;
+}
+
+.col-3 {
+  width: 30%;
+}
+
+.col-4 {
+  width: 40%;
+}
+
+.col-5 {
+  width: 50%;
+}
+
+.col-6 {
+  width: 60%;
+}
+
+.col-7 {
+  width: 70%;
+}
+
+.col-8 {
+  width: 80%;
+}
+
+.col-9 {
+  width: 90%;
+}
+
+.col-10 {
+  width: 100%;
+}
+
+.col-11 {
+  width: 110%;
+}
+
+.col-12 {
+  width: 120%;
+}
+
+.p-1 {
+  padding: 2px;
+}
+
+.p-2 {
+  padding: 4px;
+}
+
+.p-3 {
+  padding: 6px;
+}
+
+.p-4 {
+  padding: 8px;
+}
+
+.p-5 {
+  padding: 10px;
+}
+
+.p-6 {
+  padding: 12px;
+}
+
+.p-7 {
+  padding: 14px;
+}
+
+.p-8 {
+  padding: 16px;
+}
+
+.p-9 {
+  padding: 18px;
+}
+
+.p-10 {
+  padding: 20px;
+}
+
+.p-11 {
+  padding: 22px;
+}
+
+.p-12 {
+  padding: 24px;
+}
+
+.p-1 {
+  padding: 2px;
+}
+
+.p-2 {
+  padding: 4px;
+}
+
+.p-3 {
+  padding: 6px;
+}
+
+.p-4 {
+  padding: 8px;
+}
+
+.p-5 {
+  padding: 10px;
+}
+
+.p-6 {
+  padding: 12px;
+}
+
+.p-7 {
+  padding: 14px;
+}
+
+.p-8 {
+  padding: 16px;
+}
+
+.p-9 {
+  padding: 18px;
+}
+
+.p-10 {
+  padding: 20px;
+}
+
+.p-11 {
+  padding: 22px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  gap: 10px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: blue;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  color: rgba(238, 238, 238, 0.9333333333);
+}
+.btn-primary:hover {
+  background-color: #6666ff;
+  box-shadow: 4px 4px 4px 0px red;
+}
+
+.btn-secondary {
+  background-color: violet;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  color: rgba(238, 238, 238, 0.9333333333);
+}
+.btn-secondary:hover {
+  background-color: #fadcfa;
+  box-shadow: 4px 4px 4px 0px red;
+}
+
+.btn-light {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  color: black;
+}
+.btn-light:hover {
+  background-color: #cccccc;
+  box-shadow: 4px 4px 4px 0px red;
+}
+
+.btn-danger {
+  background-color: red;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  color: rgba(238, 238, 238, 0.9333333333);
+}
+.btn-danger:hover {
+  background-color: #ff6666;
+  box-shadow: 4px 4px 4px 0px red;
+}
+
+.btn-warning {
+  background-color: orange;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  color: rgba(238, 238, 238, 0.9333333333);
+}
+.btn-warning:hover {
+  background-color: #ffc966;
+  box-shadow: 4px 4px 4px 0px red;
+}
+
+.btn-dark {
+  background-color: black;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  color: rgba(238, 238, 238, 0.9333333333);
+}
+.btn-dark:hover {
+  background-color: #333333;
+  box-shadow: 4px 4px 4px 0px red;
+}
+
+/*# sourceMappingURL=style.css.map */

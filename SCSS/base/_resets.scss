@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('../Fonts/Lora/static/Lora-Regular.ttf');
+}
+/* font-family: 'Lora'; */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Fonts/Roboto/Roboto-Regular.ttf');
+}
+/* font-family: 'Roboto'; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    // font-family: 'Roboto', sans-serif;
+    /* font-family: 'Lora'; se le puede poner esto aquí si quiero que toda la pag  tenga la misma letra */
+}
+
+/* #8C3C21,#D6B187 (marron claro),#FCB622 (amarillo),#468361 (verdeClaro) ,#113D26 (verdeoscuro) */
+
+html {
+    font-size: 10px;
+    font-family: $main-font;
+    /* esto hace que un rem sea 10px */
+
+}

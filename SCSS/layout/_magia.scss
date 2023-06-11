@@ -1,0 +1,245 @@
+
+// con if
+.contenedor {
+    background-color: blueviolet;
+    // background-color: $main-color;
+
+    // @if $main-color ==#eeee {
+    //     background-color: rgb(36, 155, 155);
+    //     padding: 30px 0;
+    // }   @else if $main-color == #191919 {
+    //         background-color: rgb(205, 60, 91);
+    //         padding: 50px 0;
+    // }   @else {
+    //     background-color: #191919;
+    // }
+    @if $temporada ==verano {
+        background-color: rgb(191, 93, 27);
+        padding: 30px;
+    }   @else if $temporada == invierno {
+            background-color: rgb(77, 60, 205);
+            padding: 50px;
+            // .contenedor__hijo__parrafo  {
+            &__hijo__parrafo  {
+                color: rgb(222, 115, 115);
+            }
+    }   @else {
+        background-color: #191919;
+    }
+
+    &__hijo {
+        padding: 10px;
+        &__parrafo {
+            font-weight: bold;
+            padding: 10px;
+            font-size: 30px;
+            &__span{
+                padding: 10px;
+                color: orange;
+            }
+        }
+    }
+    .parrafo-minusculo {
+        // font-size: 20px*2;
+        padding: 30px 0;
+        @include fonts(24px,$main-font,bold,$light-color);
+        &-span {
+            color: yellowgreen;
+            transition: $transition;
+            &:hover {
+                color: $primary;
+            }
+        }
+        .otra {
+            color: $light-color;
+        }
+        a {
+            color: aqua;
+        }
+    }
+}
+.bg {
+    height: 700px;
+    width: 100%;
+    @if $temporada == verano {
+        background: $bg-img;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }   @else if $temporada == invierno {
+        background: $bg-img-segundo;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }   @else {
+            background-color: #191919;
+    }
+}
+
+// .bg {
+//     height: 700px;
+//     width: 100%;
+//     background: $bg-img;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     transition: $transition;
+//     &:hover {
+//         background: $bg-img-segundo;
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         background-position: center;
+//         transition: $transition;
+//         background-attachment: fixed; //mantiene la foto fijada cuando muevo el scroll de la pag.
+//     }
+// }
+
+// .box {
+//     display: flex;
+//     // flex-direction: column;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     img {
+//         width: 40%;
+//         height: 300px;
+//         object-fit: cover;
+//     }
+
+//     &__body {
+//         padding: 30px;
+//         width: 50%;
+//     }
+// }
+
+.box {
+    @if $temporada == invierno {
+        display: none;
+    } @else if $temporada==verano {
+        @extend .d-flex;
+        // flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    
+        img {
+            @include imagenes(60%,300px,cover);
+            // width: 40%;
+            // height: 300px;
+            // object-fit: cover;
+        }
+    
+        &__body {
+            @include flexbox(column,space-between,center,wrap,20px);
+            padding: 30px;
+            width: 50%;
+            color: violet
+        }
+    }
+}
+
+// bucle for para:
+// aumentar letra de h
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: 20px * $i;
+    }
+}
+// crear clases para ancho de contenedor
+@for $pepito from 1 through 12 {
+    .col-#{$pepito} {
+        width: 10% * $pepito;
+    }
+}
+
+// crear clases para padding
+@for $p from 1 through 12 {
+    .p-#{$p} {
+        padding: 2px * $p;
+    }
+}
+
+// con la opcion to llega hasta el 11
+@for $p from 1 to 12 {
+    .p-#{$p} {
+        padding: 2px * $p;
+    }
+}
+
+// Ejemplo de map
+
+$botones: (
+    primary: blue,
+    secondary: violet,
+    light: white,
+    danger: red,
+    warning: orange,
+    dark: black
+);
+
+.btn-container {
+    // display: flex;
+    // flex-direction: row;
+// llamar una clase de utilidades con @extend
+    // @extend .d-flex;
+    // @include flex-column;
+    @include flexbox(row,center,center,wrap,25px);
+    gap: 10px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// @each $btn, $color in $botones{
+//     .btn-#{$btn} {
+//         background-color: $color;
+//         padding: 15px;
+//         border-radius: 10px;
+//         text-decoration: none;
+//         transition: .5s;
+//         // para agregar un hover a todos estos
+//         &:hover {
+//             // background-color: darken($color: #191919, $amount: 20%);
+//             // este es el que me da por defecto ^
+//             background-color: darken($color, 20%);
+//             box-shadow: 4px 4px 4px 0px map-get($botones, danger);
+//         }
+//         // color: #eeee;
+// // si saco color de aqui lo puedo poner abajo con @else para que no se pisen
+//         @if $btn == light {
+//             // color: map-get($map: $botones, $key: dark );
+//             color: map-get($botones, dark);
+//         } @else {
+//             color: #eeee;
+//         }
+//     }
+// }
+
+@each $key, $value in $botones{
+    .btn-#{$key} {
+        background-color: $value;
+        padding: 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: .5s;
+        
+        @if $key == light {
+            color: map-get($botones, dark);
+            &:hover {
+                background-color: darken($value, 20%);
+                box-shadow: 4px 4px 4px 0px map-get($botones, danger);
+            }
+
+        } @else {
+            color: #eeee;
+            &:hover {
+                background-color: lighten($value, 20%);
+                box-shadow: 4px 4px 4px 0px map-get($botones, danger);
+            }
+        }
+    }
+}
+
+//Video 2 h12
